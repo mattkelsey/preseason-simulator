@@ -31,19 +31,9 @@ public class MouseJFrame extends JFrame implements MouseMotionListener {
         this.setVisible(true);
         rg = new RobotGraphic(500, 500, 100, 100, this);
         this.add(rg);
-
-        while (startTime < 1 || ControlLoopDevelopment.timeOut < 10 || System.currentTimeMillis() - startTime < ControlLoopDevelopment.timeOut) {
-            if (!isDragging && rg.getDegreeRotation() != 0) {
-                rg.rotate(ControlLoopDevelopment.calculations(rg));
-            }
-            try {
-                Thread.sleep(16);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
     }
 
+    public boolean magic = startTime < 1 || ControlLoopDevelopment.timeOut < 10 || System.currentTimeMillis() - startTime < ControlLoopDevelopment.timeOut;
 
     @Override
     public void mouseDragged(MouseEvent mouseEvent) {
