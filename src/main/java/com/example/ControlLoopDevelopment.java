@@ -8,7 +8,7 @@ public class ControlLoopDevelopment {
         // setSpeed(speed_value) sets the robots speed of rotation
         // Put Thread.sleep(16); in all of your while loops or you're computer will explode.
         // The imu class allows access to imu readings.
-
+        // while loops should include || magic condition... because magic.
 
     }
 
