@@ -1,9 +1,5 @@
 package com.example;
 
-import java.awt.GridLayout;
-
-import javax.swing.JFrame;
-
 public class ControlLoopDevelopment {
     static MouseJFrame frame;
     public static void  main(String[] args) {
@@ -14,7 +10,7 @@ public class ControlLoopDevelopment {
 
     public static float calculations(RobotGraphic robot) {
         System.out.println(robot.getDegreeRotation());
-        return -robot.getDegreeRotation();
+        return 0;
     }
 
 }
