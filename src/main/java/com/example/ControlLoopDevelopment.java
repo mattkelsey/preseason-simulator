@@ -3,11 +3,13 @@ package com.example;
 public class ControlLoopDevelopment {
 
     public static void calculations() throws InterruptedException {
-        while (imu.getDegreeRotation() != 0 || magic) {
-            rotate(-imu.getDegreeRotation());
-            System.out.println(imu.getDegreeRotation());
-            Thread.sleep(16); // prevents your computer from exploding
-        }
+
+        // Do your calculations here!
+        // setSpeed(speed_value) sets the robots speed of rotation
+        // Put Thread.sleep(16); in all of your while loops or you're computer will explode.
+        // The imu class allows access to imu readings.
+
+
     }
 
     //<editor-fold desc="behind the scenes magic">
@@ -19,7 +21,7 @@ public class ControlLoopDevelopment {
         calculations();
     }
     public static float timeOut = 0;
-    private static void rotate(float d) {
+    private static void setSpeed(float d) {
         if (!frame.isDragging) {
             frame.rg.rotate(d);
         }
