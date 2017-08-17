@@ -4,7 +4,6 @@ import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.geom.AffineTransform;
 import java.awt.geom.Line2D;
 
 import javax.swing.JFrame;
@@ -22,6 +21,9 @@ class RobotGraphic extends JPanel {
     private int h;
     private float degreeRotation;
     private JFrame f;
+    int cap = BasicStroke.CAP_BUTT;
+    int join = BasicStroke.JOIN_MITER;
+    BasicStroke thick = new BasicStroke(15,cap,join);
     public RobotGraphic(int x, int y, int w, int h, JFrame f) {
         this.x = x;
         this.y = y;
@@ -37,6 +39,9 @@ class RobotGraphic extends JPanel {
         g2d.translate(x, y);
         g2d.rotate(Math.toRadians(degreeRotation));
         g2d.fillRect(-w/2, -h/2, w, h);
+        g2d.setColor(Color.RED);
+        g2d.setStroke(thick);
+        g2d.draw(new Line2D.Double(0, -h/2, 0, 10));
     }
 
 

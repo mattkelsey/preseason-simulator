@@ -1,16 +1,11 @@
 package com.example;
 
-import java.awt.Graphics2D;
 import java.awt.GridLayout;
-import java.awt.Shape;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
-import java.awt.geom.Line2D;
-import java.util.Date;
 
 import javax.swing.JFrame;
 
-import static java.lang.Float.NaN;
 
 /**
  * Created by matt on 8/12/17.
